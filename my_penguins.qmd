@@ -1,0 +1,20 @@
+---
+title: "demo_palmerpengs"
+author: "Sai Koka"
+eid: "sk57348"
+---
+
+## Loading the Palmer Penguins Dataset
+
+Finding a relationship between bill length and flipper length
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+library(dplyr)
+
+penguins |>
+  group_by(species) |>
+  summarize(count = n())
+
+```
