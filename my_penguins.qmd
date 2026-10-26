@@ -17,4 +17,7 @@ penguins |>
   group_by(species) |>
   summarize(count = n())
 
+penguins |>
+  drop_na(bill_length_mm, flipper_length_mm) |>
+  ggplot(mapping = aes(x=bill_length_mm, y=flipper_length_mm, color = species)) + geom_point()
 ```
